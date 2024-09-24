@@ -33,11 +33,29 @@
         <div class="row">
           <div class="column weight-1 bg-medium">
               <div class="content">
-                  <h2>asdasd</h2>
-                  <p>loreen</p>
+                  <h2>Body-Focused Repetitive Behaviors (BFRBs)</h2>
+                  <p>Many people struggle with nervous habits like biting their nails, pulling their hair, or excessive scratching. These behaviors, often triggered by stress or anxiety, can be more than just bad habits—they can lead to physical pain, embarrassment, and a cycle of discomfort that’s hard to break. Not only do these actions damage skin, nails, and hair, but they also deepen emotional stress, affecting confidence and mental well-being. For those who suffer from these tics, each moment can feel like a battle between relief and the painful aftermath of these actions.</p>
               </div>
           </div>
-      </div>
+        </div>
+
+        <div class="row">
+          <div class="column weight-2">
+            <div class="content center-content">
+              <div class="image-container">
+                <img :src="image2Path" class="styled-image">
+              </div>
+            </div>
+          </div>
+          <div class="column weight-1">
+            <div class="content">
+              <h2>Text, I guess</h2>
+              <p>Ipsum lorem</p>
+            </div>
+          </div>
+          
+        </div>
+
       </div>
   </div>
 
@@ -53,11 +71,14 @@
               const imagePath = ref('bite.jpg')
               const imageAlt = ref('Image of finger with ring being bitten')
 
+              const image2Path = ref('bite2.png')
+
               return {
                   leftColumnTitle,
                   leftColumnContent,
                   imagePath,
                   imageAlt,
+                  image2Path,
               }
           }
       }).mount('#app')

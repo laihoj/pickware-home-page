@@ -30,6 +30,8 @@ body {
 .column {
     display: flex;
     flex-direction: column;
+    justify-content: center; /* This will vertically center the content */
+
 }
 
 .content {
