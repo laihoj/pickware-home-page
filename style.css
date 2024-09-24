@@ -1,0 +1,22 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: linear-gradient(to left bottom, #fffff0, #fef8e7, #fff0df, #ffe8d9, #ffe0d5, #ffd8d2, #ffd0d2, #ffc9d4, #ffc0d9, #fcb8e3, #f2b3f0, #e0b0ff);
+}
+#app {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    height: 100%;
+}
+.left-column, .right-column {
+    padding: 20px;
+    overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+    #app {
+        grid-template-columns: 1fr;
+    }
+}

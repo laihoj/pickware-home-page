@@ -4,16 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HTML 5 Boilerplate</title>
+    <title>Pickware</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <link rel="stylesheet" href="style.css">
-    
 
   </head>
-  <body style="background-image: linear-gradient(to left bottom, #fffff0, #fef8e7, #fff0df, #ffe8d9, #ffe0d5, #ffd8d2, #ffd0d2, #ffc9d4, #ffc0d9, #fcb8e3, #f2b3f0, #e0b0ff);">
-	<script src="index.js"></script>
-  <div class="box" style="height:100vh;">
-    
+
+  <body>
+    <div id="app">
+      <div class="left-column">
+          <h2>{{ leftColumnTitle }}</h2>
+          <p>{{ leftColumnContent }}</p>
+      </div>
+      <div class="right-column">
+          <h2>{{ rightColumnTitle }}</h2>
+          <p>{{ rightColumnContent }}</p>
+      </div>
   </div>
+
+  <script>
+      const { createApp, ref } = Vue
+
+      createApp({
+          setup() {
+              const leftColumnTitle = ref('Left Column')
+              const leftColumnContent = ref('This is the content for the left column. You can add more details about your hobby project here.')
+              
+              const rightColumnTitle = ref('Right Column')
+              const rightColumnContent = ref('This is the content for the right column. You can expand on your project, add images, or include any other relevant information here.')
+
+              return {
+                  leftColumnTitle,
+                  leftColumnContent,
+                  rightColumnTitle,
+                  rightColumnContent
+              }
+          }
+      }).mount('#app')
+  </script>
 </body>
 </html>
 
