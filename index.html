@@ -83,8 +83,8 @@
           </div>
           <div class="column weight-1">
             <div class="content">
-              <h2>Text, I guess</h2>
-              <p>Ipsum lorem</p>
+              <h2>Regain your confidence</h2>
+              <p>Order a sizing kit today</p>
             </div>
           </div>
           
@@ -106,13 +106,15 @@
               const imageAlt = ref('Image of finger with ring being bitten')
 
               const image2Path = ref('bite2.png')
+              const image3Path = ref('trichotillomania.png')
+              const image4Path = ref('dermatillomania.png')
 
               // Tab selector functionality
               const activeTab = ref('tab1')
               const tabs = ref([
                   { id: 'tab1', title: 'Onychophagia', content: 'Explore the amazing features of our motion tracker ring.', image: imagePath.value },
-                  { id: 'tab2', title: 'Trichotillomania', content: 'Learn how our technology helps you track and manage stress behaviors.', image: image2Path.value },
-                  { id: 'tab3', title: 'Dermatillomania', content: 'Read what our satisfied customers have to say about their experience.', image: '/api/placeholder/300/200' },
+                  { id: 'tab2', title: 'Trichotillomania', content: 'Learn how our technology helps you track and manage stress behaviors.', image: image3Path.value },
+                  { id: 'tab3', title: 'Dermatillomania', content: 'Read what our satisfied customers have to say about their experience.', image: image4Path.value },
               ])
 
               const setActiveTab = (tabId) => {
