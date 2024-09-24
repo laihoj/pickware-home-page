@@ -12,14 +12,32 @@
 
   <body>
     <div id="app">
-      <div class="left-column">
-          <h2>{{ leftColumnTitle }}</h2>
-          <p>{{ leftColumnContent }}</p>
-      </div>
-      <div class="right-column">
-          <div class="image-container">
-            <img :src="imagePath" :alt="imageAlt" class="styled-image">
+      <div class="column">
+
+        <div class="row">
+          <div class="column weight-1">
+            <div class="content">
+              <h2>{{ leftColumnTitle }}</h2>
+              <p>{{ leftColumnContent }}</p>
+            </div>
           </div>
+          <div class="column weight-2">
+            <div class="content center-content">
+              <div class="image-container">
+                <img :src="imagePath" :alt="imageAlt" class="styled-image">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="column weight-1 bg-medium">
+              <div class="content">
+                  <h2>asdasd</h2>
+                  <p>loreen</p>
+              </div>
+          </div>
+      </div>
       </div>
   </div>
 
