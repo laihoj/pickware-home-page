@@ -31,11 +31,45 @@
         </div>
 
         <div class="row">
-          <div class="column weight-1 bg-medium">
+          <div class="column weight-1 bg-light">
               <div class="content">
                   <h2>Body-Focused Repetitive Behaviors (BFRBs)</h2>
                   <p>Many people struggle with nervous habits like biting their nails, pulling their hair, or excessive scratching. These behaviors, often triggered by stress or anxiety, can be more than just bad habits—they can lead to physical pain, embarrassment, and a cycle of discomfort that’s hard to break. Not only do these actions damage skin, nails, and hair, but they also deepen emotional stress, affecting confidence and mental well-being. For those who suffer from these tics, each moment can feel like a battle between relief and the painful aftermath of these actions.</p>
               </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="column weight-1">
+            <div class="content">
+              <div class="tab-container">
+                <div class="tab-selector">
+                  <button 
+                      v-for="tab in tabs" 
+                      :key="tab.id"
+                      :class="['tab-button', { active: activeTab === tab.id }]"
+                      @click="setActiveTab(tab.id)"
+                  >
+                    {{ tab.title }}
+                  </button>
+                </div>
+                <div class="tab-content">
+                  <div 
+                    v-for="tab in tabs" 
+                    :key="tab.id"
+                    :class="['tab-pane', { active: activeTab === tab.id }]"
+                  >
+                    <div class="card">
+                      <img :src="tab.image" :alt="tab.title" class="card-image">
+                      <div class="card-text">
+                        <h3>{{ tab.title }}</h3>
+                        <p>{{ tab.content }}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -73,12 +107,27 @@
 
               const image2Path = ref('bite2.png')
 
+              // Tab selector functionality
+              const activeTab = ref('tab1')
+              const tabs = ref([
+                  { id: 'tab1', title: 'Onychophagia', content: 'Explore the amazing features of our motion tracker ring.', image: imagePath.value },
+                  { id: 'tab2', title: 'Trichotillomania', content: 'Learn how our technology helps you track and manage stress behaviors.', image: image2Path.value },
+                  { id: 'tab3', title: 'Dermatillomania', content: 'Read what our satisfied customers have to say about their experience.', image: '/api/placeholder/300/200' },
+              ])
+
+              const setActiveTab = (tabId) => {
+                  activeTab.value = tabId
+              }
+
               return {
                   leftColumnTitle,
                   leftColumnContent,
                   imagePath,
                   imageAlt,
                   image2Path,
+                  activeTab,
+                  tabs,
+                  setActiveTab,
               }
           }
       }).mount('#app')
