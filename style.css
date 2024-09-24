@@ -38,18 +38,24 @@ body {
 }
 
 .weight-1 { flex: 1; }
-        .weight-2 { flex: 2; }
-        .weight-3 { flex: 3; }
-        .bg-light { background-color: #f0f0f0; }
-        .bg-white { background-color: #ffffff; }
-        .bg-medium { background-color: #e0e0e0; }
-        .bg-dark { background-color: #d0d0d0; }
-        .center-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+.weight-2 { flex: 2; }
+.weight-3 { flex: 3; }
+.bg-light { background-color: #f0f0f0; }
+.bg-white { background-color: #ffffff; }
+.bg-medium { background-color: #e0e0e0; }
+.bg-dark { background-color: #d0d0d0; }
+.center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.container {
+    width: 100%;
+    max-width: 1200px; /* Adjust this value as needed */
+    margin: 0 auto; /* Center the container */
+    padding: 0 20px; /* Add some padding on smaller screens */
+}
 .image-container {
     margin-top: 20px;
     /* Adjust the max-width to control the image size */
