@@ -17,8 +17,9 @@
           <p>{{ leftColumnContent }}</p>
       </div>
       <div class="right-column">
-          <h2>{{ rightColumnTitle }}</h2>
-          <p>{{ rightColumnContent }}</p>
+          <div class="image-container">
+            <img :src="imagePath" :alt="imageAlt" class="styled-image">
+          </div>
       </div>
   </div>
 
@@ -27,17 +28,18 @@
 
       createApp({
           setup() {
-              const leftColumnTitle = ref('Left Column')
-              const leftColumnContent = ref('This is the content for the left column. You can add more details about your hobby project here.')
+              const leftColumnTitle = ref('Feel good about yourself')
+              const leftColumnContent = ref('Get your stressful ticks like nail biting under control. Try on our motion tracker ring and gain insight about when and how your stressful behaviours take place.')
               
-              const rightColumnTitle = ref('Right Column')
-              const rightColumnContent = ref('This is the content for the right column. You can expand on your project, add images, or include any other relevant information here.')
+              // Update these values with your image details
+              const imagePath = ref('bite.jpg')
+              const imageAlt = ref('Image of finger with ring being bitten')
 
               return {
                   leftColumnTitle,
                   leftColumnContent,
-                  rightColumnTitle,
-                  rightColumnContent
+                  imagePath,
+                  imageAlt,
               }
           }
       }).mount('#app')
