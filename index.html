@@ -77,7 +77,7 @@
           <div class="column weight-2">
             <div class="content center-content">
               <div class="image-container">
-                <img :src="image2Path" class="styled-image">
+                <img :src="appDepiction" :alt="imageAlt" class="styled-image">
               </div>
             </div>
           </div>
@@ -108,11 +108,12 @@
               const image2Path = ref('bite2.png')
               const image3Path = ref('trichotillomania.png')
               const image4Path = ref('dermatillomania.png')
+              const appDepiction = ref('appDepiction.png')
 
               // Tab selector functionality
               const activeTab = ref('tab1')
               const tabs = ref([
-                  { id: 'tab1', title: 'Onychophagia', content: 'Explore the amazing features of our motion tracker ring.', image: imagePath.value },
+                  { id: 'tab1', title: 'Onychophagia', content: 'Explore the amazing features of our motion tracker ring.', image: image2Path.value },
                   { id: 'tab2', title: 'Trichotillomania', content: 'Learn how our technology helps you track and manage stress behaviors.', image: image3Path.value },
                   { id: 'tab3', title: 'Dermatillomania', content: 'Read what our satisfied customers have to say about their experience.', image: image4Path.value },
               ])
@@ -130,6 +131,7 @@
                   activeTab,
                   tabs,
                   setActiveTab,
+                  appDepiction,
               }
           }
       }).mount('#app')
