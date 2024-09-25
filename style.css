@@ -174,9 +174,8 @@ body {
     }
 }
 
+/* Shared styles for both card types */
 .card {
-    display: flex;
-    flex-direction: column;
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
@@ -186,7 +185,7 @@ body {
 
 .card-image {
     width: 100%;
-    max-height: 200px;
+    height: 200px;
     object-fit: cover;
 }
 
@@ -205,22 +204,38 @@ body {
     line-height: 1.4;
 }
 
+/* Vertical card (image on top) */
+.card-vertical {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Horizontal card (image on left) */
+.card-horizontal {
+    display: flex;
+    flex-direction: column;
+}
+
 @media (min-width: 768px) {
-    .tab-button {
-        flex-grow: 0;
-        padding: 10px 20px;
+    .card-vertical {
+        max-width: 400px; /* Adjust as needed */
+    }
+    
+    .card-vertical .card-image {
+        height: 250px; /* Adjust as needed */
     }
 
-    .card {
+    .card-horizontal {
         flex-direction: row;
+        max-width: 600px; /* Adjust as needed */
     }
     
-    .card-image {
+    .card-horizontal .card-image {
         width: 40%;
-        max-height: none;
+        height: auto;
     }
     
-    .card-text {
+    .card-horizontal .card-text {
         width: 60%;
     }
 

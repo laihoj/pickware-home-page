@@ -64,7 +64,7 @@
                       :key="tab.id"
                       :class="['tab-pane', { active: activeTab === tab.id }]"
                     >
-                      <div class="card">
+                      <div class="card card-horizontal">
                         <img :src="tab.image" :alt="tab.title" class="card-image">
                         <div class="card-text">
                           <h3>{{ tab.title }}</h3>
@@ -82,18 +82,26 @@
         <div class="content-section">
           <div class="row">
             <div class="content center-content">
-              <div class="image-container">
-                <img :src="appDepiction" :alt="imageAlt" class="styled-image">
-              </div>
+              <h1>How it works</h1>
             </div>
           </div>
-        </div>
-
-        <div class="content-section">
           <div class="row">
             <div class="content center-content">
-              <div class="image-container">
-                <img :src="ringDepiction" :alt="imageAlt" class="styled-image">
+              <div class="card card-vertical">
+                <img :src="appDepiction" :alt="imageAlt" class="card-image">
+                <div class="card-text">
+                  <h3>Mobile app</h3>
+                  <p>Logging and charts</p>
+                </div>
+              </div>
+            </div>
+            <div class="content center-content">
+              <div class="card card-vertical">
+                <img :src="ringDepiction" :alt="imageAlt" class="card-image">
+                <div class="card-text">
+                  <h3>Smart ring</h3>
+                  <p>Sophisticated motion tracking</p>
+                </div>
               </div>
             </div>
           </div>
