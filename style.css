@@ -11,6 +11,14 @@ html, body {
     overflow-x: hidden;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1em;
+}
+
+p {
+    line-height: 1.5;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-image: linear-gradient(to left bottom, #fffff0, #fef8e7, #fff0df, #ffe8d9, #ffe0d5, #ffd8d2, #ffd0d2, #ffc9d4, #ffc0d9, #fcb8e3, #f2b3f0, #e0b0ff);
