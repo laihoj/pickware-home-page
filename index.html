@@ -92,6 +92,16 @@
         <div class="content-section">
           <div class="row">
             <div class="content center-content">
+              <div class="image-container">
+                <img :src="ringDepiction" :alt="imageAlt" class="styled-image">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="content-section">
+          <div class="row">
+            <div class="content center-content">
               <h2>Regain your confidence</h2>
               <p>Order a sizing kit today</p>
             </div>
@@ -106,7 +116,7 @@
 
       createApp({
           setup() {
-              const leftColumnTitle = ref('Feel good about yourself')
+              const leftColumnTitle = ref('Let your nails heal')
               const leftColumnContent = ref('Get your stressful ticks like nail biting under control. Try on our motion tracker ring and gain insight about when and how your stressful behaviours take place.')
               
               // Update these values with your image details
@@ -117,6 +127,7 @@
               const image3Path = ref('trichotillomania.png')
               const image4Path = ref('dermatillomania.png')
               const appDepiction = ref('appDepiction.png')
+              const ringDepiction = ref('ring.png')
 
               // Tab selector functionality
               const activeTab = ref('tab2')
@@ -140,6 +151,7 @@
                   tabs,
                   setActiveTab,
                   appDepiction,
+                  ringDepiction,
               }
           }
       }).mount('#app')
